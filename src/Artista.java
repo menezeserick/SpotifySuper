@@ -1,33 +1,35 @@
-public class Artist {
+package src;
+public class Artist extends Music {
     private String GeneroMusical;
     private int Idade;
     private int QntSeguidores;
     private boolean ArtistaDisponivel;
 
-    public Artista extends Music(String Nome, String GeneroMusical, int Idade, int QntSeguidores){
+    public Artist(String Nome, String GeneroMusical, int Idade, int QntSeguidores){
         super(nome);
-        this.GeneroMusical = genero;
-        this.Idade = idade;
-        this.QntSeguidores = QuantidadeSeguidores;
-    }
+        this.GeneroMusical = GeneroMusical;
+        this.Idade = Idade;
+        this.QntSeguidores = QntSeguidores;
+}
+
 
     public void mostrarIdade() {
-        System.out.println("A idade do artista " + this.Nome + " é " + this.Idade);
+        System.out.println("A idade do artista " + this.nome + " é " + this.Idade);
     }
 
     public void mostrarGeneroMusical() {
-        System.out.println("O genero musical do artista " + this.Nome + " é " + this.GeneroMusical);
+        System.out.println("O genero musical do artista " + this.nome + " é " + this.GeneroMusical);
     }
 
     public void mostrarQntSeguidores() {
-        System.out.println("A quantidade de seguidores do artista " + this.Nome + " é " + this.QntSeguidores);
+        System.out.println("A quantidade de seguidores do artista " + this.nome + " é " + this.QntSeguidores);
     }
 
     public void mostrarArtistaDisponivel() {
         if (this.ArtistaDisponivel = true) {
-            System.out.println("O artista " + this.Nome + " está disponível.");
+            System.out.println("O artista " + this.nome + " está disponível.");
         } else {
-            System.out.println("O artista " + this.Nome + " não está disponível no momento.");
+            System.out.println("O artista " + this.nome + " não está disponível no momento.");
         }
 
     }

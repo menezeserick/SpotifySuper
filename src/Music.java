@@ -1,11 +1,13 @@
+package src;
 public class Music {
-    private String nome;
+    public String nome;
     private String artista;
     private String album;
     private boolean reproduzindo;
+    public Music(String nome, String artista, String album){
+        this.nome = nome;
+        this.artista = artista;
+        this.album = album;
+    }
 }
-public Music(String Nome, String Artista, String Album){
-    this.Nome = Nome;
-    this.Artista = Artista;
-    this.Album = Album;
-}
+
