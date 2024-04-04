@@ -1,34 +1,35 @@
-package src;
 import java.util.ArrayList;
-public class Album {
-    private String titulo;
-    private Artista artista;
-    private ArrayList<Musica> musicas;
+import java.util.List;
 
-    public Album(String titulo, Artista artista) {
+class Album {
+    private String titulo;
+    private String artista;
+    private List<Musica> listaDeMusicas;
+    private String dataDeLancamento;
+
+    public Album(String titulo, String artista, String dataDeLancamento) {
         this.titulo = titulo;
         this.artista = artista;
-        this.musicas = new ArrayList<>();
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public Artista getArtista() {
-        return artista;
+        this.dataDeLancamento = dataDeLancamento;
+        this.listaDeMusicas = new ArrayList<>();
     }
 
     public void adicionarMusica(Musica musica) {
-        musicas.add(musica);
+        listaDeMusicas.add(musica);
     }
 
-    public void listarMusicas() {
-        System.out.println("Músicas do álbum " + titulo + " de " + artista.getNome() + ":");
-        for (Musica musica : musicas) {
-            System.out.println(musica.getTitulo());
+    public void removerMusica(Musica musica) {
+        listaDeMusicas.remove(musica);
+    }
+
+    public int obterDuracaoTotal() {
+        int duracaoTotal = 0;
+        for (Musica musica : listaDeMusicas) {
+            duracaoTotal += musica.getDuracao();
         }
+        return duracaoTotal;
     }
-}
-
+    public String getArtista(){
+        return artista;
+    }
 }

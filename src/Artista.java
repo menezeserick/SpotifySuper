@@ -1,36 +1,24 @@
-package src;
-public class Artista extends Music {
-    private String generoMusical;
-    private int idade;
-    private int qntSeguidores;
-    private boolean artistaDisponivel;
+import java.util.ArrayList;
 
-    public Artista(String nome, String generoMusical, int idade, int qntSeguidores){
-        super(nome);
-        this.generoMusical = generoMusical;
-        this.idade = idade;
-        this.qntSeguidores = qntSeguidores;
+class Artista extends Usuario {
+    private ArrayList<Album> listaDeAlbuns;
+    private ArrayList<Musica> listaDeMusicas;
+
+    public Artista(String nome, String email, String senha, int idade) {
+        super(nome, email, senha);
+        this.listaDeAlbuns = new ArrayList<>();
+        this.listaDeMusicas = new ArrayList<>();
     }
 
-
-    public void mostrarIdade() {
-        System.out.println("A idade do artista " + nome + " é " + idade);
+    public void adicionarAlbum(Album album) {
+        listaDeAlbuns.add(album);
     }
 
-    public void mostrarGeneroMusical() {
-        System.out.println("O genero musical do artista " + nome + " é " + generoMusical);
+    public void adicionarMusicaPopular(Musica musica) {
+        listaDeMusicas.add(musica);
     }
 
-    public void mostrarQntSeguidores() {
-        System.out.println("A quantidade de seguidores do artista " + nome + " é " + qntSeguidores);
-    }
-
-    public void mostrarArtistaDisponivel() {
-        if (this.artistaDisponivel = true) {
-            System.out.println("O artista " + nome + " está disponível.");
-        } else {
-            System.out.println("O artista " + nome + " não está disponível no momento.");
-        }
+    public boolean verificarPopularidade(Musica musica) {
+        return listaDeMusicas.contains(musica);
     }
 }
-
