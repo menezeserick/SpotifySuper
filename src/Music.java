@@ -1,14 +1,14 @@
 package src;
-public class Music {
-    public String nome;
-    private String artista;
+public class Music extends Artista {
+    public String titulo;
     private String album;
-    private boolean reproduzindo;
+    private boolean reproduzindo;  
 
-    public Music(String nome, String artista, String album){
-        this.nome = nome;
-        this.artista = artista;
+    public Music(String nome, String generoMusical, int idade, int qntSeguidores, String titulo, String album, boolean reproduzindo){
+        super(nome, generoMusical, idade, qntSeguidores);
+        this.titulo = titulo;
         this.album = album;
+        this.reproduzindo = reproduzindo;
     }
-}
+}    
 
