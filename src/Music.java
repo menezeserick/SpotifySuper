@@ -4,6 +4,7 @@ public class Music {
     private String artista;
     private String album;
     private boolean reproduzindo;
+
     public Music(String nome, String artista, String album){
         this.nome = nome;
         this.artista = artista;
