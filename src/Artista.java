@@ -14,24 +14,23 @@ public class Artista extends Music {
 
 
     public void mostrarIdade() {
-        System.out.println("A idade do artista " + this.nome + " é " + this.idade);
+        System.out.println("A idade do artista " + nome + " é " + idade);
     }
 
     public void mostrarGeneroMusical() {
-        System.out.println("O genero musical do artista " + this.nome + " é " + this.generoMusical);
+        System.out.println("O genero musical do artista " + nome + " é " + generoMusical);
     }
 
     public void mostrarQntSeguidores() {
-        System.out.println("A quantidade de seguidores do artista " + this.nome + " é " + this.qntSeguidores);
+        System.out.println("A quantidade de seguidores do artista " + nome + " é " + qntSeguidores);
     }
 
     public void mostrarArtistaDisponivel() {
         if (this.artistaDisponivel = true) {
-            System.out.println("O artista " + this.nome + " está disponível.");
+            System.out.println("O artista " + nome + " está disponível.");
         } else {
-            System.out.println("O artista " + this.nome + " não está disponível no momento.");
+            System.out.println("O artista " + nome + " não está disponível no momento.");
         }
-
     }
 }
 
