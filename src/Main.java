@@ -19,6 +19,12 @@ public class Main {
             System.out.println("4. Sair");
             System.out.print("Opção: ");
             opcao = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine();
+        }
+    
+    }
+}
 
+
+    
         
